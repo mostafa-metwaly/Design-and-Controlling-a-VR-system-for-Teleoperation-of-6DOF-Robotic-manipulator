@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="veteng">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0133287781394212 -0.0803959215331008 0.105908539082121"
+        rpy="0 0 0" />
+      <mass
+        value="0.959701625007017" />
+      <inertia
+        ixx="0.00120161646964579"
+        ixy="9.47107175557502E-07"
+        ixz="-1.15521508056979E-05"
+        iyy="0.0031196707830736"
+        iyz="5.1043017955678E-07"
+        izz="0.00218270244520942" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.00478927450434063 -0.0249738003723574 0.00136639951462489"
+        rpy="0 0 0" />
+      <mass
+        value="1.00188802978335" />
+      <inertia
+        ixx="0.00134706457274175"
+        ixy="-2.55303558359948E-05"
+        ixz="0.000254363710029845"
+        iyy="0.00197423883560841"
+        iyz="-1.3276656319934E-05"
+        izz="0.00122304792046968" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="-0.070712 -0.10121 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.0577235115476273 0.0122173255562982 0.00330289948596771"
+        rpy="0 0 0" />
+      <mass
+        value="0.527637590551025" />
+      <inertia
+        ixx="0.000303744918116355"
+        ixy="-9.81477977877311E-05"
+        ixz="2.33634976085516E-05"
+        iyy="0.000722153965777223"
+        iyz="6.02525177131854E-06"
+        izz="0.000737227838253702" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="-0.047 0.026285 0"
+      rpy="0 0 0.068045" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.14159"
+      effort="0"
+      velocity="0" />   
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.000804514258212638 -0.00242242636991309 0.00601841026906474"
+        rpy="0 0 0" />
+      <mass
+        value="0.202089167606231" />
+      <inertia
+        ixx="0.000127616323878461"
+        ixy="-1.04509278553002E-05"
+        ixz="9.56512144855866E-07"
+        iyy="7.6575048278608E-05"
+        iyz="4.49838589912824E-06"
+        izz="0.000109726182482566" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0.15242 0.033865 0"
+      rpy="0 0 0.017878" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="-0.0766105470816425 0.0132302103240282 -0.000456707769701997"
+        rpy="0 0 0" />
+      <mass
+        value="0.193284089863767" />
+      <inertia
+        ixx="7.42603945943135E-05"
+        ixy="2.21558065703412E-05"
+        ixz="2.00914520106618E-05"
+        iyy="0.00019759999791143"
+        iyz="-3.47570314895815E-06"
+        izz="0.000190468473453247" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0.00511515068333534 0.0295607042116179 0.000399999999999484"
+      rpy="-0.0234712514103992 0.00406104346427603 -4.76611396217794E-05" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0.985356807053935 -0.170505022777845 0" />
+    <limit
+      lower="-4.71239"
+      upper="4.71239"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-0.000333492415400705 -0.000234704219469736 -0.00114232958057561"
+        rpy="0 0 0" />
+      <mass
+        value="0.0818709956862019" />
+      <inertia
+        ixx="2.33078671624178E-05"
+        ixy="2.10418865884824E-06"
+        ixz="1.99324553521498E-07"
+        iyy="2.75534262551125E-05"
+        iyz="3.49086535480845E-07"
+        izz="2.18131707895204E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="-0.15075929587221 0.0260872173335035 0"
+      rpy="0 0 -0.0858986192563073" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="1.0472"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="-0.0151805934319221 -5.38180611187045E-13 -0.000522684600012618"
+        rpy="0 0 0" />
+      <mass
+        value="0.00165627299103346" />
+      <inertia
+        ixx="6.54668918164806E-08"
+        ixy="1.65536449179151E-18"
+        ixz="8.71962988889806E-10"
+        iyy="4.73816828916121E-08"
+        iyz="-1.11416248883605E-17"
+        izz="4.69298287677944E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://veteng/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="-0.00767333480684568 -0.0191935609570401 0"
+      rpy="-0.844697508540915 0 1.19279513085328" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
